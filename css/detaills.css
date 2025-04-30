@@ -1,0 +1,152 @@
+/* Estilo base */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #1e1e1e;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cabeçalho */
+header {
+  text-align: center;
+  height: 11em;
+  border-bottom: #6c6b34 solid 2px;
+  display: flex;
+  align-items: center;
+}
+
+.collumn {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+    flex: 1;
+    display: flex;
+}  
+
+input, select {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+#logo, #shopping-cart, #library {
+  cursor: pointer;
+}
+
+/* Container principal */
+.game-details-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    max-width: 1400px;
+    margin: auto;
+    flex: 1; /* isso faz ocupar o espaço vertical restante */
+    flex-wrap: wrap;
+  }
+  
+
+/* Lado esquerdo */
+.left-side {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex: 1;
+    gap: 40px; /* Espaçamento entre h1 e imagem */
+    padding: 40px;
+  }
+  
+  .left-side h1 {
+    font-size: 5rem;
+    margin: 0;
+  }
+  
+  .left-side img {
+    max-width: 50%;
+    max-height: 500px; /* Aumentado */
+    border-radius: 12px;
+}  
+
+/* Lado direito */
+.right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    min-width: 300px;
+    padding: 20px;
+}
+  
+  .right-side p {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin: 0;
+}
+  
+  #gamePrice {
+    font-size: 1.4rem;
+    color: #2e8b57;
+    font-weight: bold;
+}  
+
+/* Botão */
+#addCart {
+    align-self: flex-start;
+    background-color: #6c6b34;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}  
+
+#addCart:hover {
+  background-color: #3e3d1a;
+}
+
+/* Mensagem flutuante */
+.mensagem-flutuante {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  z-index: 1000;
+  box-shadow: 0 0 10px #000;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .game-details-container {
+      flex-direction: column;
+      height: auto;
+      padding: 30px 20px;
+    }
+  
+    .left-side, .right-side {
+      padding: 0;
+      width: 100%;
+      max-width: 90%;
+    }
+  
+    .left-side h1 {
+      font-size: 2rem;
+    }
+  
+    #addCart {
+      width: 100%;
+      text-align: center;
+    }
+  }

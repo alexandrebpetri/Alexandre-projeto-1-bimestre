@@ -9,6 +9,15 @@ body {
 header {
   text-align: center;
   margin-bottom: 20px;
+  height: 11em;
+  border-bottom: #6c6b34 solid 2px;
+  display: flex;
+}
+
+.collumn {
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
 input, select {
@@ -16,6 +25,18 @@ input, select {
   margin: 10px;
   border-radius: 5px;
   border: none;
+}
+
+#logo{
+  cursor: pointer;
+}
+
+#shopping-cart {
+  cursor: pointer;
+}
+
+#library {
+  cursor: pointer;
 }
 
 .grid {
@@ -32,6 +53,7 @@ input, select {
   width: 200px;
   text-align: center;
   transition: transform 0.2s;
+  cursor: pointer;
 }
 
 .game-card:hover {
@@ -44,7 +66,7 @@ input, select {
 }
 
 button {
-  background-color: #4CAF50;
+  background-color: #6c6b34;
   color: white;
   border: none;
   padding: 10px;
@@ -55,7 +77,43 @@ button {
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: #3e3d1a;
+}
+
+
+
+#gamesContainer {
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+#gamesContainer img{
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+#gamesContainer h1 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+#gamesContainer p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+#gamePrice {
+  font-size: 24px;
+  color: #2e8b57;
+  font-weight: bold;
 }
 
 .center {
@@ -75,7 +133,7 @@ button:hover {
   box-shadow: 0 0 10px #000;
 }
 
-.botao-carrinho {
+#adicionarCarrinho {
   display: inline-block;
   background-color: #2196F3;
   color: white;
@@ -86,7 +144,7 @@ button:hover {
   transition: background-color 0.3s;
 }
 
-.botao-carrinho:hover {
+#adicionarCarrinho:hover {
   background-color: #1976D2;
 }
 

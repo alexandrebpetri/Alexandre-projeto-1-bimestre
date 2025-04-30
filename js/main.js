@@ -10,18 +10,18 @@ function loadGames() {
   
       const card = document.createElement("div");
       card.className = "game-card";
+      card.onclick = () => seeGame(game.id);
       card.innerHTML = `
         <img src="${game.image}" alt="${game.name}" />
         <h2>${game.name}</h2>
         <p>${priceDisplay}</p>
-        <button onclick="seeGame(${game.id})">Ver mais</button>
       `;
       container.appendChild(card);
     }
   }
   
   function seeGame(id) {
-    window.location.href = `game.html?id=${id}`;
+    window.location.href = `details.html?id=${id}`;
   }
   
   // Deixar visível globalmente:
