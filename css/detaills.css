@@ -13,23 +13,20 @@ body {
 /* Cabeçalho */
 header {
   text-align: center;
-  height: 11em;
+  margin-bottom: 20px;
+  height: 8em;
   border-bottom: #6c6b34 solid 2px;
-  display: flex;
-  align-items: center;
-}
-
-.collumn {
-  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-main {
-    flex: 1;
-    display: flex;
-}  
+
+.collumn {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
 
 input, select {
   padding: 10px;
@@ -38,9 +35,81 @@ input, select {
   border: none;
 }
 
-#logo, #shopping-cart, #library {
+#logo {
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: auto
 }
+
+#shopping-cart {
+  cursor: pointer;
+  margin: auto;
+}
+
+#shopping-cart img {
+  width: 70px;
+  height: 70px;
+  margin-right: 12px;
+  object-fit: cover;
+  border-color: #6c6b34 solid 2px;
+}
+
+#library {
+  cursor: pointer;
+  margin: auto;
+}
+
+#library img {
+  width: 70px;
+  height: 70px;
+  margin-right: 12px;
+  object-fit: cover;
+  border-color: #6c6b34 solid 2px;
+}
+
+#user img {
+  width: 100px;
+  height: 100px;
+  margin-right: 12px;
+  border-radius: 50%;
+  object-fit: cover;
+  border-color: #6c6b34 solid 2px;
+}
+
+#search {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border-bottom: 1px solid #555;
+  max-width: 300px;
+  margin-top: 30px;
+  margin: auto;
+  margin-right: 120px;
+}
+
+#search-img {
+  width: 27px;
+  height: 27px;
+  margin-right: 12px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#search input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #ddd;
+  font-size: 1.1rem;
+}
+
+#search input::placeholder {
+  color: #aaa;
+}
+
 
 /* Container principal */
 .game-details-container {
@@ -58,7 +127,6 @@ input, select {
 .left-side {
     display: flex;
     flex-direction: column;
-    text-align: center;
     flex: 1;
     gap: 40px; /* Espaçamento entre h1 e imagem */
     padding: 40px;
@@ -71,6 +139,7 @@ input, select {
   
   .left-side img {
     max-width: 50%;
+    margin-left: 80px;
     max-height: 500px; /* Aumentado */
     border-radius: 12px;
 }  
@@ -78,6 +147,7 @@ input, select {
 /* Lado direito */
 .right-side {
     display: flex;
+    flex: 1;
     flex-direction: column;
     justify-content: center;
     gap: 15px;
@@ -115,7 +185,7 @@ input, select {
 }
 
 /* Mensagem flutuante */
-.mensagem-flutuante {
+.floating-message {
   position: fixed;
   top: 20px;
   right: 20px;

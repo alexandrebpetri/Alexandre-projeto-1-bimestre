@@ -12,12 +12,12 @@
 
   <div class="collumn">
 
-  <div onclick="window.location.href = 'library.html';" id="library">
+    <div onclick= 'alert("Em breve")' id="library">
     <img src="assets/library.png" alt="icone da biblioteca">
   </div>
 
   <div onclick="window.location.href = 'Cart.html';" id="shopping-cart">
-    <img src="assets/shopping_cart.png" alt="icone de um carrinho de compras">
+    <img src="assets/cart.png" alt="icone de um carrinho de compras">
   </div>
 
   </div>
@@ -35,7 +35,7 @@
 
   <div id="search">
     <img src="assets/search-icon.png" alt="icone de pesquisa" id="search-img">
-    <input type="search" name="search-game" id="search-game" placeholder="pesquisar">
+    <input type="search" name="search-game" id="search-game" placeholder="pesquisar" oninput="searchGames(this.value)">
   </div>
 
   <div id="user">
@@ -49,10 +49,6 @@
   <main>
     <div id="lista-jogos" class="grid"></div>
   </main>
-
-  <footer>
-
-  </footer>
 
   <script type="module" src="js/main.js"></script>
 </body>

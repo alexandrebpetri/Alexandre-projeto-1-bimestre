@@ -23,22 +23,30 @@ function loadDetails() {
       const CartButton = document.getElementById('addCart');
       CartButton.addEventListener('click', () => AddToCart(game));
     } else {
-      alert("Jogo não encontrado!");
+      showMessage("Jogo não encontrado!");
     }
   });
 }
 
 function AddToCart(game) {
-  let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
-  carrinho.push(game);
-  localStorage.setItem('carrinho', JSON.stringify(carrinho));
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  const gameExisting = cart.some(item => item.name === game.name);
+
+  if (gameExisting) {
+      showMessage("Este jogo já está no carrinho.");
+      return;
+  }
+
+  cart.push(game);
+  localStorage.setItem('cart', JSON.stringify(cart));
 
   showMessage("Jogo adicionado ao carrinho!");
 }
 
 function showMessage(text) {
     const div = document.createElement("div");
-    div.className = "mensagem-flutuante";
+    div.className = "floating-message";
     div.innerText = text;
     document.body.appendChild(div);
   
