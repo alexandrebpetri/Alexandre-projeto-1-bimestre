@@ -27,7 +27,7 @@ function searchGames(text) {
     loadGames(filtered);  
 }
 
-  function seeGame(id) {
+  export function seeGame(id) {
     window.location.href = `details.html?id=${id}`;
   }
   
